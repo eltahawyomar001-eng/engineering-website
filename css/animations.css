@@ -1,0 +1,465 @@
+/* ============================================
+   ANIMATIONS STYLESHEET
+   ============================================ */
+
+/* ============================================
+   FADE ANIMATIONS
+   ============================================ */
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.animate-fade-in.visible {
+    opacity: 1;
+}
+
+.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-fade-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation Delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+.delay-7 { transition-delay: 0.7s; }
+.delay-8 { transition-delay: 0.8s; }
+
+/* ============================================
+   SCALE ANIMATIONS
+   ============================================ */
+.animate-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ============================================
+   TEXT REVEAL ANIMATION
+   ============================================ */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-reveal.visible span {
+    transform: translateY(0);
+}
+
+/* ============================================
+   LINE ANIMATIONS
+   ============================================ */
+.animate-line {
+    width: 0;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-line.visible {
+    width: 100%;
+}
+
+.animate-line-vertical {
+    height: 0;
+    transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-line-vertical.visible {
+    height: 100%;
+}
+
+/* ============================================
+   STAGGER ANIMATIONS
+   ============================================ */
+.stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.6s; }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.7s; }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.8s; }
+
+.stagger-children.visible > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   HOVER ANIMATIONS
+   ============================================ */
+.hover-lift {
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hover-glow {
+    transition: box-shadow var(--transition-base);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px var(--color-accent-light);
+}
+
+.hover-scale {
+    transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* ============================================
+   IMAGE ANIMATIONS
+   ============================================ */
+.image-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-reveal::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-dark);
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-reveal.visible::after {
+    transform: scaleX(0);
+}
+
+.image-reveal img {
+    transform: scale(1.2);
+    transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-reveal.visible img {
+    transform: scale(1);
+}
+
+/* ============================================
+   PARALLAX EFFECT (via JS)
+   ============================================ */
+.parallax {
+    will-change: transform;
+}
+
+/* ============================================
+   MAGNETIC BUTTON EFFECT
+   ============================================ */
+.magnetic {
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   MARQUEE ANIMATION
+   ============================================ */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-flex;
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-content > * {
+    margin-right: var(--space-8);
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ============================================
+   PULSE ANIMATIONS
+   ============================================ */
+@keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+
+.animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.pulse-ring::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid currentColor;
+    border-radius: inherit;
+    animation: pulse-ring 2s ease-out infinite;
+}
+
+/* ============================================
+   TYPING ANIMATION
+   ============================================ */
+.typing {
+    overflow: hidden;
+    border-right: 2px solid var(--color-accent);
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--color-accent); }
+}
+
+/* ============================================
+   FLOATING ANIMATION
+   ============================================ */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float-rotate {
+    0%, 100% { 
+        transform: translateY(0) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-10px) rotate(5deg); 
+    }
+}
+
+.animate-float-rotate {
+    animation: float-rotate 4s ease-in-out infinite;
+}
+
+/* ============================================
+   ROTATE ANIMATION
+   ============================================ */
+@keyframes rotate-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+}
+
+/* ============================================
+   COUNTER ANIMATION (via JS)
+   ============================================ */
+.counter {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   LOADING SKELETON
+   ============================================ */
+.skeleton {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-gray-800);
+}
+
+.skeleton::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ============================================
+   PAGE TRANSITIONS
+   ============================================ */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: var(--color-black);
+    z-index: 9999;
+    transform: translateY(-100%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-transition.active {
+    transform: translateY(0);
+}
+
+.page-transition.exit {
+    transform: translateY(100%);
+}
+
+/* ============================================
+   CURSOR TRAIL (optional effect)
+   ============================================ */
+.cursor-trail {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ============================================
+   SPLIT TEXT ANIMATION
+   ============================================ */
+.split-text .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px) rotate(10deg);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.split-text.visible .char {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+}
+
+/* Variable delays for each character */
+.split-text.visible .char:nth-child(1) { transition-delay: 0.02s; }
+.split-text.visible .char:nth-child(2) { transition-delay: 0.04s; }
+.split-text.visible .char:nth-child(3) { transition-delay: 0.06s; }
+.split-text.visible .char:nth-child(4) { transition-delay: 0.08s; }
+.split-text.visible .char:nth-child(5) { transition-delay: 0.1s; }
+.split-text.visible .char:nth-child(6) { transition-delay: 0.12s; }
+.split-text.visible .char:nth-child(7) { transition-delay: 0.14s; }
+.split-text.visible .char:nth-child(8) { transition-delay: 0.16s; }
+.split-text.visible .char:nth-child(9) { transition-delay: 0.18s; }
+.split-text.visible .char:nth-child(10) { transition-delay: 0.2s; }
+
+/* ============================================
+   3D CARD TILT
+   ============================================ */
+.tilt-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.tilt-card-inner {
+    transition: transform 0.3s ease;
+}
+
+/* ============================================
+   MORPHING SHAPES
+   ============================================ */
+@keyframes morph {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+.morph-shape {
+    animation: morph 8s ease-in-out infinite;
+}
+
+/* ============================================
+   REDUCED MOTION PREFERENCE
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .animate-fade-up,
+    .animate-fade-in,
+    .animate-fade-left,
+    .animate-fade-right,
+    .animate-scale,
+    .stagger-children > * {
+        opacity: 1;
+        transform: none;
+    }
+}

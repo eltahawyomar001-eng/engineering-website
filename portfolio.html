@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио — ИНЖИНИРИНГ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 20H28M20 12V28M14 14L26 26M26 14L14 26" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">ИНЖИНИРИНГ</span>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="portfolio.html" class="nav-link active">Портфолио</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="partners.html" class="nav-link">Партнёрам</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="documents.html" class="nav-link">Документы</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contact" class="btn btn-outline">Начать проект</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">
+                    <span class="nav-number">01</span>
+                    <span class="nav-title">Главная</span>
+                </a>
+                <a href="portfolio.html" class="mobile-nav-link active">
+                    <span class="nav-number">02</span>
+                    <span class="nav-title">Портфолио</span>
+                </a>
+                <a href="services.html" class="mobile-nav-link">
+                    <span class="nav-number">03</span>
+                    <span class="nav-title">Услуги</span>
+                </a>
+                <a href="partners.html" class="mobile-nav-link">
+                    <span class="nav-number">04</span>
+                    <span class="nav-title">Партнёрам</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <span class="nav-number">05</span>
+                    <span class="nav-title">О нас</span>
+                </a>
+                <a href="documents.html" class="mobile-nav-link">
+                    <span class="nav-number">06</span>
+                    <span class="nav-title">Документы</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">← Главная</a>
+            </div>
+            <h1 class="page-title animate-fade-up">
+                НАШИ ПРОЕКТЫ <br>
+                <span class="text-muted">НА ОДНОМ ЭКРАНЕ</span>
+            </h1>
+            <p class="page-description animate-fade-up delay-1">
+                Мы умело сочетаем красоту, стиль и техническую грамотность, создавая качественный образ для наших клиентов на каждом этапе коммуникации.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter-group filter-primary">
+                    <button class="filter-btn active" data-filter="all">Все проекты</button>
+                    <button class="filter-btn" data-filter="websites">Сайты</button>
+                    <button class="filter-btn" data-filter="identity">Айдентика</button>
+                    <button class="filter-btn" data-filter="catalogs">Каталоги</button>
+                    <button class="filter-btn" data-filter="brandbook">Брендбук</button>
+                    <button class="filter-btn" data-filter="3d">3D модели</button>
+                </div>
+                <div class="filter-group filter-secondary">
+                    <button class="filter-tag" data-industry="dealers">Дилеры/Дистрибьюторы</button>
+                    <button class="filter-tag" data-industry="production">Производство</button>
+                    <button class="filter-tag" data-industry="construction">Строительство</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="portfolio-card" data-category="3d identity" data-industry="production" data-project="1">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <rect x="40" y="30" width="120" height="90" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M60 90L85 65L110 80L140 55" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="125" cy="50" r="12" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">BENARMO</h3>
+                        <p class="portfolio-desc">Создание каталога продукции BENARMO</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="portfolio-card" data-category="identity websites catalogs" data-industry="production" data-project="2">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <rect x="30" y="25" width="50" height="70" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="45" y="40" width="50" height="70" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="60" y="55" width="50" height="70" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="140" cy="75" r="30" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">CHRONOS-M</h3>
+                        <p class="portfolio-desc">Создание корпоративной айдентики, каталога и сайта для CHRONOS-M</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="portfolio-card portfolio-card-wide" data-category="identity 3d websites catalogs" data-industry="production" data-project="3">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <rect x="20" y="20" width="160" height="110" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <rect x="35" y="35" width="60" height="40" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M35 95H160" stroke="currentColor" stroke-width="1.5"/>
+                                <text x="100" y="115" text-anchor="middle" fill="currentColor" font-size="10">ПРОИЗВОДСТВО</text>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">PMR Group</h3>
+                        <p class="portfolio-desc">Ребрендинг, создание корпоративной айдентики, 3D моделей, каталога и сайта для PMR group</p>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="portfolio-card" data-category="3d" data-industry="production" data-project="4">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <path d="M100 30L150 60V110L100 130L50 110V60L100 30Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M100 80L150 60M100 80L50 60M100 80V130" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">Neural Core</h3>
+                        <p class="portfolio-desc">3D визуализация промышленного оборудования</p>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="portfolio-card" data-category="websites" data-industry="dealers" data-project="5">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <rect x="30" y="30" width="140" height="90" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <rect x="40" y="45" width="40" height="6" fill="currentColor"/>
+                                <rect x="40" y="55" width="60" height="3" fill="currentColor" opacity="0.5"/>
+                                <rect x="40" y="62" width="55" height="3" fill="currentColor" opacity="0.5"/>
+                                <rect x="40" y="75" width="120" height="35" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">TechProm</h3>
+                        <p class="portfolio-desc">Корпоративный сайт дистрибьютора</p>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="portfolio-card" data-category="identity brandbook" data-industry="construction" data-project="6">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <rect x="50" y="40" width="100" height="70" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M70 110V60L100 45L130 60V110" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="90" y="80" width="20" height="30" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">СтройКомплект</h3>
+                        <p class="portfolio-desc">Брендбук и айдентика строительной компании</p>
+                    </div>
+                </article>
+
+                <!-- Project 7 -->
+                <article class="portfolio-card portfolio-card-tall" data-category="catalogs 3d" data-industry="production" data-project="7">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 200" fill="none">
+                                <rect x="40" y="20" width="120" height="160" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <rect x="55" y="40" width="90" height="50" stroke="currentColor" stroke-width="1.5"/>
+                                <rect x="55" y="100" width="90" height="4" fill="currentColor" opacity="0.5"/>
+                                <rect x="55" y="110" width="70" height="4" fill="currentColor" opacity="0.5"/>
+                                <rect x="55" y="120" width="80" height="4" fill="currentColor" opacity="0.5"/>
+                                <rect x="55" y="140" width="40" height="20" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">ПромКаталог</h3>
+                        <p class="portfolio-desc">Технический каталог с 3D визуализацией продукции</p>
+                    </div>
+                </article>
+
+                <!-- Project 8 -->
+                <article class="portfolio-card" data-category="websites identity" data-industry="dealers" data-project="8">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <circle cx="100" cy="75" r="45" stroke="currentColor" stroke-width="2"/>
+                                <path d="M75 75L90 90L125 55" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">ИнжСервис</h3>
+                        <p class="portfolio-desc">Сайт и айдентика сервисной компании</p>
+                    </div>
+                </article>
+
+                <!-- Project 9 -->
+                <article class="portfolio-card" data-category="3d" data-industry="production" data-project="9">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder">
+                            <svg viewBox="0 0 200 150" fill="none">
+                                <ellipse cx="100" cy="100" rx="60" ry="20" stroke="currentColor" stroke-width="2"/>
+                                <ellipse cx="100" cy="75" rx="60" ry="20" stroke="currentColor" stroke-width="2"/>
+                                <ellipse cx="100" cy="50" rx="60" ry="20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M40 50V100M160 50V100" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <button class="view-project-btn">
+                                <span>Смотреть проект</span>
+                                <svg viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title">КомпрессорТех</h3>
+                        <p class="portfolio-desc">3D модели компрессорного оборудования</p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-wrapper">
+                <button class="btn btn-secondary load-more-btn">
+                    <span>Загрузить ещё</span>
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            
+            <div class="modal-content">
+                <div class="modal-gallery">
+                    <div class="gallery-main">
+                        <div class="gallery-placeholder">
+                            <svg viewBox="0 0 400 300" fill="none">
+                                <rect x="50" y="50" width="300" height="200" rx="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M100 180L150 130L200 160L300 100" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="260" cy="100" r="25" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="gallery-thumbs">
+                        <button class="thumb active">
+                            <div class="thumb-placeholder"></div>
+                        </button>
+                        <button class="thumb">
+                            <div class="thumb-placeholder"></div>
+                        </button>
+                        <button class="thumb">
+                            <div class="thumb-placeholder"></div>
+                        </button>
+                        <button class="thumb">
+                            <div class="thumb-placeholder"></div>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="modal-info">
+                    <div class="modal-header">
+                        <span class="modal-category">3D Моделирование</span>
+                        <span class="modal-year">2024</span>
+                    </div>
+                    <h2 class="modal-title">BENARMO</h2>
+                    <p class="modal-description">
+                        Создание каталога продукции BENARMO — ведущего производителя промышленного оборудования. 
+                        Проект включал разработку визуальной концепции, 3D визуализацию продукции и вёрстку многостраничного каталога.
+                    </p>
+                    
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Клиент</span>
+                            <span class="detail-value">BENARMO</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Услуги</span>
+                            <span class="detail-value">3D моделирование, Каталог, Фотосъёмка</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Индустрия</span>
+                            <span class="detail-value">Производство</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Срок</span>
+                            <span class="detail-value">3 месяца</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-tags">
+                        <span class="modal-tag">CAD</span>
+                        <span class="modal-tag">Render</span>
+                        <span class="modal-tag">Печать</span>
+                        <span class="modal-tag">Вёрстка</span>
+                    </div>
+                    
+                    <div class="modal-actions">
+                        <a href="#" class="btn btn-primary">
+                            <span>Обсудить похожий проект</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-nav">
+                <button class="modal-nav-btn prev">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <span>Предыдущий</span>
+                </button>
+                <button class="modal-nav-btn next">
+                    <span>Следующий</span>
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <div class="cta-inner">
+                <h2 class="cta-title">Готовы создать <span class="text-accent">ваш проект?</span></h2>
+                <p class="cta-text">Расскажите о вашей идее и получите бесплатную консультацию</p>
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Начать проект</span>
+                    <svg viewBox="0 0 24 24" fill="none" class="btn-icon">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20H28M20 12V28M14 14L26 26M26 14L14 26" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>ИНЖИНИРИНГ</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Создаём инженерные решения, которые работают на ваш бизнес
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Навигация</h4>
+                        <nav class="footer-nav">
+                            <a href="portfolio.html">Портфолио</a>
+                            <a href="services.html">Услуги</a>
+                            <a href="partners.html">Партнёрам</a>
+                            <a href="about.html">О нас</a>
+                            <a href="documents.html">Документы</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Услуги</h4>
+                        <nav class="footer-nav">
+                            <a href="services.html#3d">3D Моделирование</a>
+                            <a href="services.html#design">Промышленный дизайн</a>
+                            <a href="services.html#consulting">Консалтинг</a>
+                            <a href="services.html#docs">Документация</a>
+                        </nav>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Контакты</h4>
+                        <div class="footer-contacts">
+                            <a href="mailto:info@engineering.ru">info@engineering.ru</a>
+                            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                            <address>Москва, ул. Инженерная, 1</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 ИНЖИНИРИНГ. Все права защищены.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="VK">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12C8 12 10 8 12 8C14 8 16 12 16 12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

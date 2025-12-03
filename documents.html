@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документы — ИНЖИНИРИНГ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 20H28M20 12V28M14 14L26 26M26 14L14 26" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">ИНЖИНИРИНГ</span>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="portfolio.html" class="nav-link">Портфолио</a>
+                <a href="services.html" class="nav-link">Услуги</a>
+                <a href="partners.html" class="nav-link">Партнёрам</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="documents.html" class="nav-link active">Документы</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contact" class="btn btn-outline">Начать проект</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">
+                    <span class="nav-number">01</span>
+                    <span class="nav-title">Главная</span>
+                </a>
+                <a href="portfolio.html" class="mobile-nav-link">
+                    <span class="nav-number">02</span>
+                    <span class="nav-title">Портфолио</span>
+                </a>
+                <a href="services.html" class="mobile-nav-link">
+                    <span class="nav-number">03</span>
+                    <span class="nav-title">Услуги</span>
+                </a>
+                <a href="partners.html" class="mobile-nav-link">
+                    <span class="nav-number">04</span>
+                    <span class="nav-title">Партнёрам</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <span class="nav-number">05</span>
+                    <span class="nav-title">О нас</span>
+                </a>
+                <a href="documents.html" class="mobile-nav-link active">
+                    <span class="nav-number">06</span>
+                    <span class="nav-title">Документы</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="section-label animate-fade-up">
+                    <span class="label-number">006</span>
+                    <span class="label-text">Документы</span>
+                </div>
+                <h1 class="page-hero-title animate-fade-up delay-1">
+                    Документация <br>
+                    <span class="text-accent">и ресурсы</span>
+                </h1>
+                <p class="page-hero-desc animate-fade-up delay-2">
+                    Официальные документы компании, шаблоны договоров и полезные материалы для клиентов и партнёров
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documents Section -->
+    <section class="documents-section">
+        <div class="container">
+            <!-- Category Filters -->
+            <div class="documents-categories">
+                <button class="category-btn active" data-category="all">Все документы</button>
+                <button class="category-btn" data-category="company">О компании</button>
+                <button class="category-btn" data-category="contracts">Договоры</button>
+                <button class="category-btn" data-category="tech">Технические</button>
+                <button class="category-btn" data-category="marketing">Маркетинговые</button>
+            </div>
+
+            <!-- Documents Grid -->
+            <div class="documents-grid">
+                <!-- Company Documents -->
+                <a href="#" class="document-card" data-category="company">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Презентация компании</h3>
+                        <span class="document-meta">PDF • 5.2 MB • Обновлено: Ноябрь 2024</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="company">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Свидетельство о регистрации</h3>
+                        <span class="document-meta">PDF • 0.5 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="company">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Реквизиты компании</h3>
+                        <span class="document-meta">PDF • 0.2 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Contracts -->
+                <a href="#" class="document-card" data-category="contracts">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20M12 11V17M9 14H15" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Типовой договор на оказание услуг</h3>
+                        <span class="document-meta">DOCX • 0.3 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="contracts">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Соглашение о конфиденциальности (NDA)</h3>
+                        <span class="document-meta">PDF • 0.4 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="contracts">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Партнёрское соглашение</h3>
+                        <span class="document-meta">PDF • 0.5 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Technical -->
+                <a href="#" class="document-card" data-category="tech">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Техническое задание — шаблон</h3>
+                        <span class="document-meta">DOCX • 0.2 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="tech">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Требования к исходным материалам</h3>
+                        <span class="document-meta">PDF • 1.2 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="tech">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Стандарты оформления чертежей</h3>
+                        <span class="document-meta">PDF • 2.5 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <!-- Marketing -->
+                <a href="#" class="document-card" data-category="marketing">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
+                            <path d="M21 15L16 10L5 21" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Логотип и фирменный стиль</h3>
+                        <span class="document-meta">ZIP • 15.8 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="marketing">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 2V8H20M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Брендбук</h3>
+                        <span class="document-meta">PDF • 8.3 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#" class="document-card" data-category="marketing">
+                    <div class="document-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M3 9H21M9 21V9" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="document-info">
+                        <h3 class="document-name">Баннеры для партнёров</h3>
+                        <span class="document-meta">ZIP • 12.1 MB</span>
+                    </div>
+                    <span class="document-download">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10L12 15L17 10M12 15V3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Часто задаваемые <span class="text-accent">вопросы</span>
+                </h2>
+            </div>
+
+            <div class="values-grid">
+                <article class="value-card">
+                    <h3 class="value-title">Как получить оригиналы документов?</h3>
+                    <p class="value-text">
+                        Оригиналы документов с печатями и подписями можно получить в нашем офисе или заказать доставку курьером. Свяжитесь с нами для уточнения деталей.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <h3 class="value-title">Какие форматы файлов вы предоставляете?</h3>
+                    <p class="value-text">
+                        Мы предоставляем файлы в форматах PDF, DOCX, DWG, STEP, IGES и других по запросу. Уточните необходимые форматы при оформлении заказа.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <h3 class="value-title">Как заключить договор?</h3>
+                    <p class="value-text">
+                        Скачайте типовой договор из раздела выше, заполните реквизиты и отправьте нам на согласование. Мы подпишем договор в электронном виде или курьером.
+                    </p>
+                </article>
+
+                <article class="value-card">
+                    <h3 class="value-title">Нужен индивидуальный документ?</h3>
+                    <p class="value-text">
+                        Если вам нужен документ, которого нет в списке, или требуется индивидуальная форма договора — свяжитесь с нами, мы подготовим необходимые материалы.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-inner">
+                <h2 class="cta-title">Не нашли нужный документ?</h2>
+                <p class="cta-text">Свяжитесь с нами, и мы предоставим необходимые материалы</p>
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Связаться с нами</span>
+                    <svg viewBox="0 0 24 24" fill="none" class="btn-icon">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20H28M20 12V28M14 14L26 26M26 14L14 26" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>ИНЖИНИРИНГ</span>
+                    </a>
+                    <p class="footer-tagline">Создаём инженерные решения, которые работают на ваш бизнес</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Навигация</h4>
+                        <nav class="footer-nav">
+                            <a href="portfolio.html">Портфолио</a>
+                            <a href="services.html">Услуги</a>
+                            <a href="partners.html">Партнёрам</a>
+                            <a href="about.html">О нас</a>
+                            <a href="documents.html">Документы</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Контакты</h4>
+                        <div class="footer-contacts">
+                            <a href="mailto:info@engineering.ru">info@engineering.ru</a>
+                            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 ИНЖИНИРИНГ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Documents filter
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const documentCards = document.querySelectorAll('.document-card');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.getAttribute('data-category');
+                    
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    documentCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (category === 'all' || cardCategory === category) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

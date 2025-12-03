@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги — ИНЖИНИРИНГ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 20H28M20 12V28M14 14L26 26M26 14L14 26" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+                <span class="logo-text">ИНЖИНИРИНГ</span>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="portfolio.html" class="nav-link">Портфолио</a>
+                <a href="services.html" class="nav-link active">Услуги</a>
+                <a href="partners.html" class="nav-link">Партнёрам</a>
+                <a href="about.html" class="nav-link">О нас</a>
+                <a href="documents.html" class="nav-link">Документы</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="index.html#contact" class="btn btn-outline">Начать проект</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav">
+                <a href="index.html" class="mobile-nav-link">
+                    <span class="nav-number">01</span>
+                    <span class="nav-title">Главная</span>
+                </a>
+                <a href="portfolio.html" class="mobile-nav-link">
+                    <span class="nav-number">02</span>
+                    <span class="nav-title">Портфолио</span>
+                </a>
+                <a href="services.html" class="mobile-nav-link active">
+                    <span class="nav-number">03</span>
+                    <span class="nav-title">Услуги</span>
+                </a>
+                <a href="partners.html" class="mobile-nav-link">
+                    <span class="nav-number">04</span>
+                    <span class="nav-title">Партнёрам</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <span class="nav-number">05</span>
+                    <span class="nav-title">О нас</span>
+                </a>
+                <a href="documents.html" class="mobile-nav-link">
+                    <span class="nav-number">06</span>
+                    <span class="nav-title">Документы</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero services-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="section-label animate-fade-up">
+                    <span class="label-number">002</span>
+                    <span class="label-text">Услуги</span>
+                </div>
+                <h1 class="page-hero-title animate-fade-up delay-1">
+                    Гибкие решения для создания <br>
+                    <span class="text-accent">современной цифровой инфраструктуры</span>
+                </h1>
+                <p class="page-hero-desc animate-fade-up delay-2">
+                    Масштабируемые системы будущего, которые адаптируются под ваши бизнес-потребности
+                </p>
+            </div>
+            <div class="page-hero-aside">
+                <span class="aside-text">Ключевые возможности Platform включают:</span>
+                <div class="aside-dots">
+                    <span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span>
+                    <span class="accent"></span><span class="accent"></span><span></span><span></span>
+                    <span></span><span></span><span class="accent"></span><span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Tabs Section -->
+    <section class="services-detailed">
+        <div class="container">
+            <div class="services-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="3d">
+                        <span class="tab-arrow">↗</span>
+                        <span class="tab-number">01</span>
+                        <span class="tab-label">3D Моделирование</span>
+                    </button>
+                    <button class="tab-btn" data-tab="design">
+                        <span class="tab-arrow">↓</span>
+                        <span class="tab-number">02</span>
+                        <span class="tab-label">Промышленный дизайн</span>
+                    </button>
+                    <button class="tab-btn" data-tab="consulting">
+                        <span class="tab-arrow">↓</span>
+                        <span class="tab-number">03</span>
+                        <span class="tab-label">Консалтинг</span>
+                    </button>
+                    <button class="tab-btn" data-tab="docs">
+                        <span class="tab-arrow">↓</span>
+                        <span class="tab-number">04</span>
+                        <span class="tab-label">Документация</span>
+                    </button>
+                </div>
+
+                <div class="tabs-content">
+                    <!-- 3D Modeling Tab -->
+                    <div class="tab-panel active" id="3d">
+                        <div class="tab-panel-image">
+                            <div class="panel-image-placeholder">
+                                <svg viewBox="0 0 300 250" fill="none">
+                                    <path d="M150 50L250 100V200L150 240L50 200V100L150 50Z" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M150 140L250 100M150 140L50 100M150 140V240" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="150" cy="140" r="20" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="tab-panel-content">
+                            <h3 class="panel-title">3D Моделирование</h3>
+                            <p class="panel-description">
+                                Самообучающееся интеллектуальное ядро, которое наблюдает, учится и принимает умные решения за миллисекунды для оптимизации ваших операций.
+                            </p>
+                            <ul class="panel-features">
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>CAD проектирование</strong>
+                                        <span>Создание точных 3D моделей в SolidWorks, AutoCAD, Inventor</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Реверс-инжиниринг</strong>
+                                        <span>Восстановление 3D моделей по физическим образцам</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Прототипирование</strong>
+                                        <span>Быстрое создание прототипов для тестирования</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Визуализация</strong>
+                                        <span>Фотореалистичный рендеринг для презентаций</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="panel-stats">
+                                <div class="panel-stat">
+                                    <span class="stat-value">98%</span>
+                                    <span class="stat-label">Точность моделей</span>
+                                </div>
+                                <div class="panel-stat">
+                                    <span class="stat-value">500+</span>
+                                    <span class="stat-label">Моделей создано</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Industrial Design Tab -->
+                    <div class="tab-panel" id="design">
+                        <div class="tab-panel-image">
+                            <div class="panel-image-placeholder">
+                                <svg viewBox="0 0 300 250" fill="none">
+                                    <rect x="50" y="60" width="200" height="130" rx="8" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="80" y="90" width="60" height="40" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="200" cy="110" r="25" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M80 160H220" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="tab-panel-content">
+                            <h3 class="panel-title">Промышленный дизайн</h3>
+                            <p class="panel-description">
+                                Разработка эргономичных и эстетичных решений для промышленных изделий с учётом требований производства и эксплуатации.
+                            </p>
+                            <ul class="panel-features">
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Концептуальный дизайн</strong>
+                                        <span>Разработка визуальной концепции продукта</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Эргономика</strong>
+                                        <span>Проектирование с учётом человеческого фактора</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>DFM анализ</strong>
+                                        <span>Оптимизация для массового производства</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Consulting Tab -->
+                    <div class="tab-panel" id="consulting">
+                        <div class="tab-panel-image">
+                            <div class="panel-image-placeholder">
+                                <svg viewBox="0 0 300 250" fill="none">
+                                    <circle cx="150" cy="125" r="60" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M150 85V125L180 145" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="80" cy="80" r="15" stroke="currentColor" stroke-width="1.5"/>
+                                    <circle cx="220" cy="170" r="15" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M92 88L115 100M185 150L208 162" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="tab-panel-content">
+                            <h3 class="panel-title">Инженерный консалтинг</h3>
+                            <p class="panel-description">
+                                Экспертная поддержка на всех этапах разработки и производства. Помогаем оптимизировать процессы и сократить затраты.
+                            </p>
+                            <ul class="panel-features">
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Аудит процессов</strong>
+                                        <span>Анализ текущих производственных процессов</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Оптимизация</strong>
+                                        <span>Рекомендации по улучшению эффективности</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Сопровождение</strong>
+                                        <span>Поддержка на этапе внедрения</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Documentation Tab -->
+                    <div class="tab-panel" id="docs">
+                        <div class="tab-panel-image">
+                            <div class="panel-image-placeholder">
+                                <svg viewBox="0 0 300 250" fill="none">
+                                    <rect x="70" y="50" width="160" height="150" rx="4" stroke="currentColor" stroke-width="2"/>
+                                    <rect x="90" y="80" width="120" height="8" fill="currentColor" opacity="0.5"/>
+                                    <rect x="90" y="100" width="100" height="6" fill="currentColor" opacity="0.3"/>
+                                    <rect x="90" y="115" width="110" height="6" fill="currentColor" opacity="0.3"/>
+                                    <rect x="90" y="130" width="90" height="6" fill="currentColor" opacity="0.3"/>
+                                    <rect x="90" y="160" width="60" height="20" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="tab-panel-content">
+                            <h3 class="panel-title">Техническая документация</h3>
+                            <p class="panel-description">
+                                Разработка полного комплекта технической документации по ГОСТ и международным стандартам.
+                            </p>
+                            <ul class="panel-features">
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Конструкторская документация</strong>
+                                        <span>Чертежи, спецификации, ведомости</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Технологическая документация</strong>
+                                        <span>Техпроцессы, карты наладки</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="feature-icon">
+                                        <svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2"/></svg>
+                                    </span>
+                                    <div>
+                                        <strong>Эксплуатационная документация</strong>
+                                        <span>Руководства, инструкции, паспорта</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tabs-sidebar">
+                    <div class="sidebar-card">
+                        <h4>Основные услуги</h4>
+                        <span class="sidebar-count">4/4</span>
+                    </div>
+                    <h3 class="sidebar-title">
+                        Модульные, гибкие решения для современной цифровой инфраструктуры
+                    </h3>
+                    <p class="sidebar-text">
+                        Мы создаём системы будущего, которые масштабируются и адаптируются под ваши бизнес-потребности.
+                    </p>
+                    <div class="sidebar-features">
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot accent"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot accent"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot accent"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                        <span class="feature-dot"></span>
+                    </div>
+                    <div class="sidebar-cta">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                            <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Проектируем, оптимизируем, масштабируем и защищаем.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">
+                    <span class="label-number">003</span>
+                    <span class="label-text">Тарифы</span>
+                </div>
+                <h2 class="section-title">
+                    Выберите подходящий <span class="text-accent">формат работы</span>
+                </h2>
+            </div>
+
+            <div class="pricing-grid">
+                <article class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Проект</h3>
+                        <p class="pricing-desc">Для конкретных задач с фиксированным объёмом</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-from">от</span>
+                        <span class="price-value">150 000</span>
+                        <span class="price-currency">₽</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Фиксированная стоимость</li>
+                        <li>Чёткие сроки и этапы</li>
+                        <li>Полный комплект документации</li>
+                        <li>Гарантия на результат</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn btn-secondary btn-full">Обсудить проект</a>
+                </article>
+
+                <article class="pricing-card pricing-card-featured">
+                    <div class="pricing-badge">Популярный</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Абонемент</h3>
+                        <p class="pricing-desc">Регулярная поддержка и развитие</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-from">от</span>
+                        <span class="price-value">80 000</span>
+                        <span class="price-currency">₽/мес</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Выделенная команда</li>
+                        <li>Приоритетная поддержка</li>
+                        <li>Гибкий объём работ</li>
+                        <li>Скидка 20% на все услуги</li>
+                        <li>Ежемесячные отчёты</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn btn-primary btn-full">Выбрать тариф</a>
+                </article>
+
+                <article class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Консультация</h3>
+                        <p class="pricing-desc">Экспертная оценка и рекомендации</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="price-from">от</span>
+                        <span class="price-value">15 000</span>
+                        <span class="price-currency">₽</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Аудит текущего состояния</li>
+                        <li>Письменное заключение</li>
+                        <li>Рекомендации по оптимизации</li>
+                        <li>1 час Q&A сессии</li>
+                    </ul>
+                    <a href="index.html#contact" class="btn btn-secondary btn-full">Записаться</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-inner">
+                <h2 class="cta-title">Не нашли нужную услугу?</h2>
+                <p class="cta-text">Расскажите о вашей задаче — мы найдём оптимальное решение</p>
+                <a href="index.html#contact" class="btn btn-primary">
+                    <span>Связаться с нами</span>
+                    <svg viewBox="0 0 24 24" fill="none" class="btn-icon">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20H28M20 12V28M14 14L26 26M26 14L14 26" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                        <span>ИНЖИНИРИНГ</span>
+                    </a>
+                    <p class="footer-tagline">Создаём инженерные решения, которые работают на ваш бизнес</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Навигация</h4>
+                        <nav class="footer-nav">
+                            <a href="portfolio.html">Портфолио</a>
+                            <a href="services.html">Услуги</a>
+                            <a href="partners.html">Партнёрам</a>
+                            <a href="about.html">О нас</a>
+                            <a href="documents.html">Документы</a>
+                        </nav>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Контакты</h4>
+                        <div class="footer-contacts">
+                            <a href="mailto:info@engineering.ru">info@engineering.ru</a>
+                            <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                            <address>Москва, ул. Инженерная, 1</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 ИНЖИНИРИНГ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Services page tabs
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tabId = btn.getAttribute('data-tab');
+                    
+                    // Update buttons
+                    tabBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.querySelector('.tab-arrow').textContent = '↓';
+                    });
+                    btn.classList.add('active');
+                    btn.querySelector('.tab-arrow').textContent = '↗';
+                    
+                    // Update panels
+                    tabPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                        if (panel.id === tabId) {
+                            panel.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
